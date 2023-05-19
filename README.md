@@ -54,14 +54,14 @@ start the new application.
 
 pp\_liveview-app-1  | [watch] build finished, watching for changes...
 pp\_liveview-app-1  | [info] Access PentoWeb.Endpoint at http://localhost:4000
-pp\_liveview-app-1  | 
+pp\_liveview-app-1  |
 pp\_liveview-app-1  | Rebuilding...
-pp\_liveview-app-1  | 
+pp\_liveview-app-1  |
 pp\_liveview-app-1  | Done in 891ms.
 
 Open your favorite web browser and go to http://localhost:4000
 
-[Localhost 4000](/docs/images/ppl-localhost-4000)
+![Localhost 4000](/docs/images/ppl-localhost-4000 "Programming Phoenix LiveView Default Landing Page")
 
 
 
