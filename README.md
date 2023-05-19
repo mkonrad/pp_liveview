@@ -18,7 +18,7 @@ Create GitHub Project
 ---------------------
 The following command will generate a GitHub repository from the 
 aviumlabs/phoenix-compose template repository and clone the new repository 
-locally. [Ref](#avl-phoenix-compose)
+locally. [Avium Labs Phoenix Compose Reference][avl-phoenix-compose]
 
     $ cd <projects/directory>
     $ gh repo create pp_liveview -c -d "A Phoenix LiveView Project" --public \
@@ -35,15 +35,11 @@ it will create the Phoenix Framework project as an umbrella application.
     $ cd pp_liveview
     $ ./prepare -i pento -u
 
-Initializing Phoenix Framework project...  
-
-Application container root............... /opt  
-
-Application name......................... pento  
-
-Running docker compose build...  
-
-Running phx.new umbrella...
+Initializing Phoenix Framework project...<br />
+Application container root............... /opt<br />
+Application name......................... pento<br />
+Running docker compose build...<br />
+Running phx.new umbrella...<br />
 
 ...
 * running mix deps.get
@@ -57,17 +53,12 @@ start the new application.
 
     $ ./prepare -f
 
-pp\_liveview-app-1  | [watch] build finished, watching for changes...
-
-pp\_liveview-app-1  | [info] Access PentoWeb.Endpoint at http://localhost:4000
-
-pp\_liveview-app-1  |
-
-pp\_liveview-app-1  | Rebuilding...
-
-pp\_liveview-app-1  |
-
-pp\_liveview-app-1  | Done in 891ms.
+pp\_liveview-app-1  | [watch] build finished, watching for changes...<br />
+pp\_liveview-app-1  | [info] Access PentoWeb.Endpoint at http://localhost:4000<br />
+pp\_liveview-app-1  |<br />
+pp\_liveview-app-1  | Rebuilding...<br />
+pp\_liveview-app-1  |<br />
+pp\_liveview-app-1  | Done in 891ms.<br />
 
 Open your favorite web browser and go to http://localhost:4000
 
@@ -78,4 +69,4 @@ Open your favorite web browser and go to http://localhost:4000
 References
 ----------
 
-[avl-phoenix-compose]: aviumlabs/phoenix-compose (https://github.com/aviumlabs/phoenix-compose)
+[avl-phoenix-compose]: https://github.com/aviumlabs/phoenix-compose
