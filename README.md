@@ -35,13 +35,13 @@ it will create the Phoenix Framework project as an umbrella application.
     $ cd pp_liveview
     $ ./prepare -i pento -u
 
-Initializing Phoenix Framework project...
+Initializing Phoenix Framework project...  
 
-Application container root............... /opt
+Application container root............... /opt  
 
-Application name......................... pento
+Application name......................... pento  
 
-Running docker compose build...
+Running docker compose build...  
 
 Running phx.new umbrella...
 
@@ -78,4 +78,4 @@ Open your favorite web browser and go to http://localhost:4000
 References
 ----------
 
-[avl-phoenix-compose]: (https://github.com/aviumlabs/phoenix-compose)
+[avl-phoenix-compose]: aviumlabs/phoenix-compose (https://github.com/aviumlabs/phoenix-compose)
