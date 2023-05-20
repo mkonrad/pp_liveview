@@ -65,6 +65,14 @@ Open your favorite web browser and go to http://localhost:4000
 ![Localhost 4000](/docs/images/ppl-localhost-4000.png "Programming Phoenix LiveView Default Landing Page")
 
 
+Tagged Versions
+---------------
+
+| Version | Description                                                        |
+|---------|--------------------------------------------------------------------|
+| 0.1.0   | Initial starting state - Phoenix OOTB                              | 
+
+The 0.1.0 release can be used as a development starting point.
 
 References
 ----------
