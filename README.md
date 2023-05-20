@@ -60,9 +60,11 @@ pp\_liveview-app-1  | Rebuilding...<br />
 pp\_liveview-app-1  |<br />
 pp\_liveview-app-1  | Done in 891ms.<br />
 
-Open your favorite web browser and go to http://localhost:4000
+Open your favorite web browser and go to http://localhost:4000 and you should 
+see the following page:
 
-![Localhost 4000](/docs/images/ppl-localhost-4000.png "Programming Phoenix LiveView Default Landing Page")
+![Localhost 4000](/docs/images/ppl-localhost-4000.png
+"Programming Phoenix LiveView Default Landing Page")
 
 
 Tagged Versions
