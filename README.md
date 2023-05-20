@@ -18,7 +18,7 @@ Create GitHub Project
 ---------------------
 The following command will generate a GitHub repository from the 
 aviumlabs/phoenix-compose template repository and clone the new repository 
-locally. [Avium Labs Phoenix Compose Reference][avl-phoenix-compose]
+locally. [Avium Labs Phoenix Compose Reference] [avl-phoenix-compose]
 
     $ cd <projects/directory>
     $ gh repo create pp_liveview -c -d "A Phoenix LiveView Project" --public \
