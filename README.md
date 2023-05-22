@@ -89,16 +89,6 @@ Then to start iex, we just run it like we normally would:
 
 
 
-
-Tagged Versions
----------------
-
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 0.1.0   | Initial starting state - Phoenix OOTB                              | 
-
-The 0.1.0 release can be used as a development starting point.
-
 References
 ----------
 
