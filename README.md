@@ -66,6 +66,29 @@ see the following page:
 ![Localhost 4000](/docs/images/ppl-localhost-4000.png
 "Programming Phoenix LiveView Default Landing Page")
 
+Running iex
+-----------
+In the docker environment, running iex is a bit different. 
+
+Here will will use the docker compose exec command. To do so, we need to be in 
+the parent directory pp\_liveview:
+
+    $ cd pp_liveview
+    $ docker compose exec app iex -S mix
+
+Interactive Elixir (1.14.4) - press Ctrl+c to exit (type h() ENTER for help)<br />
+iex(1)> 
+
+We can create an alias for iex to reduce our typing:
+
+    $ alias iex="docker compose exec app iex"
+
+Then to start iex, we just run it like we normally would:
+
+    $ iex -S mix
+
+
+
 
 Tagged Versions
 ---------------
