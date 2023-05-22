@@ -4,7 +4,7 @@ defmodule PentoWeb.WrongLive do
 
   def mount(_params, _session, socket) do
     winning_number = game_number()
-    {:ok, assign(socket, score: 0, winning_number: winning_number, message: "Make a guess:")}
+    {:ok, assign(socket, score: 0, winning_number: winning_number, message: "Make a guess:", winner: false)}
   end
 
   @spec render(any) ::
@@ -15,17 +15,21 @@ defmodule PentoWeb.WrongLive do
     <h1>Your score: <%= @score %></h1>
     <h2>
       <%= @message %>
-      <br />
-    </h2>
 
+    </h2>
     <h2>
       <%= for n <- 1..10 do %>
-        <.link href="#" phx-click="guess" phx-value-number= {n} >
+        <.link href="#" class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80" phx-click="guess" phx-value-number= {n} >
+        
           <%= n %>
+        
         </.link>
       <% end %>
     </h2>
 
+    <%= if @winner == true do %>
+      <.link patch={~p"/guess"} class="rounded-lg bg-rose-400 px-2 py-1 hover:bg-rose-400/80">Play again?</.link>
+    <% end %>
     
     """
   end
@@ -42,12 +46,12 @@ defmodule PentoWeb.WrongLive do
     g = String.to_integer(guess)
     score = socket.assigns.score
 
-    {message, s} =
+    {message, s, winner} =
       case g do
         ^wn ->
-          {"Your guess: #{guess}. Winner!", 1}
+          {"Your guess: #{guess}. Winner!", 1, true}
         _ -> 
-          {"Your guess: #{guess}. Wrong. Guess again.", -1} 
+          {"Your guess: #{guess}. Wrong. Guess again.", -1, false} 
       end
 
     score = score + s
@@ -57,7 +61,8 @@ defmodule PentoWeb.WrongLive do
       assign(
         socket,
         message: message,
-        score: score)}
+        score: score,
+        winner: winner)}
   end
 
   def game_number() do
