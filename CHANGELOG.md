@@ -14,6 +14,13 @@ Tagged Versions
 
 2023-05-23 Running phx.gen.auth
 -------------------------------
+Adding authentication services is being completed in a new git branch - auth.
+
+    $ git branch auth
+    $ git checkout auth
+
+Next we use the wmix alias to call the correct mix, under the umbrella 
+application architecture.
 
     $ wmix phx.gen.auth Accounts User users
 
@@ -34,7 +41,7 @@ to create your account and then access "/dev/mailbox" to
 see the account confirmation email.
 `
 
-We need to use the wmix alias for these steps due to the umbrella environment.
+Also need to use the wmix alias for these steps: 
 
 ### Command
 
@@ -82,6 +89,11 @@ Next run the OOTB test:
 ** (Mix) The database for Pento.Repo couldn't be created: killed
 
 I'll need to come back to that...
+
+
+__Had to restart the containers in order for the bcrypt module to be loaded.__
+
+
 
 
 References
