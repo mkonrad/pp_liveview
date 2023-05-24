@@ -8,6 +8,7 @@ Tagged Versions
 
 | Version | Description                                 | Notes                |
 |---------|--------------------------------------------------------------------|
+| 0.3.0   | Phoenix authentication OOTB                 |                      |
 | 0.2.0   | Exercise 1, guessing game.                  | Game exercises       |
 | 0.1.0   | Initial starting state - Phoenix OOTB       | Baseline             | 
 
