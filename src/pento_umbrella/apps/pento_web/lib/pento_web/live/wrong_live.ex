@@ -1,10 +1,20 @@
 defmodule PentoWeb.WrongLive do
   use PentoWeb, :live_view
 
-
-  def mount(_params, _session, socket) do
+  def mount(_params, session, socket) do
     winning_number = game_number()
-    {:ok, assign(socket, score: 0, winning_number: winning_number, message: "Make a guess:", winner: false)}
+
+    {
+      :ok,
+      assign(
+        socket,
+        score: 0,
+        message: "Guess a number.",
+        session_id: session["live_socket_id"],
+        winning_number: winning_number,
+        winner: false
+      )
+    }
   end
 
   @spec render(any) ::
@@ -25,6 +35,10 @@ defmodule PentoWeb.WrongLive do
         
         </.link>
       <% end %>
+      <pre>
+        <%= @current_user.email %>
+        <%= @session_id %>
+      </pre>
     </h2>
 
     <%= if @winner == true do %>
