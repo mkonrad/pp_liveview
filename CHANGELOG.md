@@ -7,11 +7,22 @@ Tagged Versions
 ---------------
 
 | Version | Description                                 | Notes                |
-|---------|--------------------------------------------------------------------|
+|---------|---------------------------------------------|----------------------|
 | 0.3.0   | Phoenix authentication OOTB                 |                      |
 | 0.2.0   | Exercise 1, guessing game.                  | Game exercises       |
 | 0.1.0   | Initial starting state - Phoenix OOTB       | Baseline             | 
 
+
+2023-05-25 mailer
+-----------------
+New branch for testing email - mailer
+
+    $ git branch mailer
+    $ git checkout mailer
+
+
+
+Note: auth branch was merged into main and deleted.
 
 2023-05-23 Running phx.gen.auth
 -------------------------------
