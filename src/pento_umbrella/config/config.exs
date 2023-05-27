@@ -20,7 +20,22 @@ config :pento,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :pento, Pento.Mailer, adapter: Swoosh.Adapters.Local
+# config :pento, Pento.Mailer, adapter: Swoosh.Adapters.Local
+config :pento, Pento.Mailer, 
+  adapter: Swoosh.Adapters.SMTP,
+  relay: System.get_env("SMTP_SERVER"),
+  port: System.get_env("SMTP_PORT"),
+  username: System.get_env("SMTP_USERNAME"),
+  password: System.get_env("SMTP_PASSWORD"),
+  ssl: false,
+  tls: :always,
+  auth: :always,
+  dkim: [
+    s: "default", d: "aviumlabs.com",
+    private_key: {:pem_plain, File.read!('apps/pento/priv/keys/aviumlabs.private')}
+  ],
+  retries: 2,
+  no_mx_lookups: false
 
 config :pento_web,
   ecto_repos: [Pento.Repo],

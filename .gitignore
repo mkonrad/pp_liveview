@@ -10,7 +10,7 @@ src/**/.fetch
 *.ez
 src/**/config/*.secret.exs
 src/**/.elixir_ls/
-.env
+.env*
 
 # Erlang
 *.eunit
@@ -26,3 +26,6 @@ src/**/_checkouts/
 
 # vim
 *.swp
+
+# Private Keys
+src/**/keys/*.private

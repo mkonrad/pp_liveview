@@ -2,7 +2,7 @@
 docker-compose.yml
 
 # environment file
-.env
+.env*
 
 # Apple
 .DS_Store
@@ -23,3 +23,6 @@ npm-debug.log
 # Aviumlabs specific
 README.md
 prepare
+
+# Private Keys
+**/keys/*.private
