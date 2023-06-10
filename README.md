@@ -74,18 +74,23 @@ Here will will use the docker compose exec command. To do so, we need to be in
 the parent directory pp\_liveview:
 
     $ cd pp_liveview
-    $ docker compose exec app iex -S mix
+    $ docker compose run --rm app iex -S mix
 
-Interactive Elixir (1.14.4) - press Ctrl+c to exit (type h() ENTER for help)<br />
+Interactive Elixir (1.14.5) - press Ctrl+c to exit (type h() ENTER for help)<br />
 iex(1)> 
 
-We can create an alias for iex to reduce our typing:
+### Environment File
+An environment file is included with the project to set aliases to ease development. 
 
-    $ alias iex="docker compose exec app iex"
+    $ cd </path/project/directory>
+    $ . ./.pentodev
 
-Then to start iex, we just run it like we normally would:
+This will set four aliases:
 
-    $ iex -S mix
+    > mix - runs mix at the top level of the umbrella application
+    > iex - runs iex at the top level of the umbrella application
+    > amix - runs mix at the context level of the umbrella application
+    > wmix - runs mix at the web application level of the umbella application
 
 
 

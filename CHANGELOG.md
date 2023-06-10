@@ -14,6 +14,19 @@ see mailer notes below |
 | 0.2.0   | Exercise 1, guessing game.                  | Game exercises       |
 | 0.1.0   | Initial starting state - Phoenix OOTB       | Baseline             | 
 
+2023-06-07 username and redirect
+--------------------------------
+### Page 158
+Added the username migration with an update to the existing records. I'm sure 
+there is a better approach to updating the existing records; perhaps with changesets.
+I also had to leave the username field to allow null for the initial migration. 
+
+    $ amix ecto.gen.migration <migraion_name>
+
+For the automatic redirect from / to /guess, I made use of this 
+[blog](https://www.viget.com/articles/how-to-redirect-from-the-phoenix-router/).
+Only implemented a very small portion of the redirect solution.
+
 
 2023-05-25 mailer
 -----------------
