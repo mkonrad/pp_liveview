@@ -144,11 +144,12 @@ defmodule PentoWeb.UserAuth do
       end
   """
   def on_mount(:mount_current_user, _params, session, socket) do
-    {:cont, mount_current_user(session, socket)}
+      {:cont, mount_current_user(session, socket)}
   end
 
   def on_mount(:ensure_authenticated, _params, session, socket) do
     socket = mount_current_user(session, socket)
+    socket = mount_session_id(session, socket)
 
     if socket.assigns.current_user do
       {:cont, socket}
@@ -179,6 +180,15 @@ defmodule PentoWeb.UserAuth do
       end
     end)
   end
+
+  defp mount_session_id(session, socket) do
+    Phoenix.Component.assign_new(socket, :session_id, fn ->
+      if session_id = session["live_socket_id"] do
+        session_id
+      end
+    end)
+  end
+
 
   @doc """
   Used for routes that require the user to not be authenticated.

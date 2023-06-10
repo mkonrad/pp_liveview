@@ -1,7 +1,8 @@
 defmodule PentoWeb.WrongLive do
   use PentoWeb, :live_view
 
-  def mount(_params, session, socket) do
+
+  def mount(_params, _session, socket) do
     winning_number = game_number()
 
     {
@@ -10,7 +11,7 @@ defmodule PentoWeb.WrongLive do
         socket,
         score: 0,
         message: "Guess a number.",
-        session_id: session["live_socket_id"],
+        #session_id: session["live_socket_id"],
         winning_number: winning_number,
         winner: false
       )
@@ -36,7 +37,7 @@ defmodule PentoWeb.WrongLive do
         </.link>
       <% end %>
       <pre>
-        <%= @current_user.email %>
+        <%= @current_user.username %>
         <%= @session_id %>
       </pre>
     </h2>
@@ -48,7 +49,7 @@ defmodule PentoWeb.WrongLive do
     """
   end
 
-  def time() do
+  defp time() do
     DateTime.utc_now |> to_string
   end
 
@@ -79,7 +80,14 @@ defmodule PentoWeb.WrongLive do
         winner: winner)}
   end
 
-  def game_number() do
+  def handle_params(_params, uri, socket) do
+
+    IO.puts("uri: #{uri}")
+    
+    {:noreply, socket}
+  end
+
+  defp game_number() do
     :rand.uniform(9) + 1
   end
 

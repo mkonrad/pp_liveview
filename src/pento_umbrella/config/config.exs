@@ -32,7 +32,7 @@ config :pento, Pento.Mailer,
   auth: :always,
   dkim: [
     s: "default", d: "aviumlabs.com",
-    private_key: {:pem_plain, File.read!('apps/pento/priv/keys/aviumlabs.private')}
+    private_key: {:pem_plain, File.read!('/opt/pento_umbrella/apps/pento/priv/keys/aviumlabs.private')}
   ],
   retries: 2,
   no_mx_lookups: false

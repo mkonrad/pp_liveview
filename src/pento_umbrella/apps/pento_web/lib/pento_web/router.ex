@@ -20,7 +20,8 @@ defmodule PentoWeb.Router do
   scope "/", PentoWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    # get "/", PageController, :home
+    get "/", Plug.Redirector, to: "/guess"
   end
 
   # Other scopes may use custom stacks.
