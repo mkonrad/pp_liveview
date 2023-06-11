@@ -8,11 +8,16 @@ Tags
 
 | Tag     | Description                                 | Notes                |
 |:-------:|---------------------------------------------|----------------------|
+| 0.5.0   | Database, redirector, session\_id exercises |                      |
 | 0.4.0   | SMTP configuraion for sending email         | Requires configuraion, 
 see mailer notes below |
 | 0.3.0   | Phoenix authentication OOTB                 |                      |
 | 0.2.0   | Exercise 1, guessing game.                  | Game exercises       |
 | 0.1.0   | Initial starting state - Phoenix OOTB       | Baseline             | 
+
+2023-06-11 LiveView Product
+---------------------------
+
 
 2023-06-07 username and redirect
 --------------------------------
